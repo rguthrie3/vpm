@@ -62,7 +62,7 @@ function update_packages_help() {
     In the future, this should take as argument specific plugins to update, and update all plugins if no args are supplied"
 }
 
-function install_from_file() {
+function install_from_file_help() {
     echo "Vim Package Manager
 
     Installs all of the plugins listed in the file passed as an argument.
@@ -188,16 +188,16 @@ function main() {
                 list_packages
                 ;;
             "install")
-                install_packages
+                install_packages $@
                 ;;
             "update")
-                update_packages
+                update_packages $@
                 ;;
             "remove")
-                remove_packages
+                remove_packages $@
                 ;;
             "install-from-file")
-                install_from_file
+                install_from_file $@
                 ;;
             "bootstrap")
                 bootstrap
